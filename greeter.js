@@ -1,5 +1,13 @@
 function greeter(person) {
-    return "Hello, " + person;
+    return "Hello, " + person.firstName + " " + person.lastName;
 }
-var user = "TYPO3 User";
-document.body.innerHTML = greeter(user);
+function emitCat(x) {
+    return x.hatKatze;
+}
+var sebastian = {
+    firstName: "Sebastian",
+    lastName: "Kurfürst",
+    event: "TYPO3 Barcamp",
+    hatKatze: true
+};
+document.body.innerHTML = greeter(sebastian) + emitCat(sebastian);

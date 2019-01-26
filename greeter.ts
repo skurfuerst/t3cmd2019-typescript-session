@@ -1,7 +1,26 @@
-function greeter(person: string) {
-    return "Hello, " + person;
+interface User {
+    firstName: string;
+    lastName: string;
+    event: string;
 }
 
-let user = "TYPO3 User";
+interface HasCat {
+    hatKatze: boolean;
+}
 
-document.body.innerHTML = greeter(user);
+function greeter(person: User) {
+    return "Hello, " + person.firstName + " " +  person.lastName;
+}
+
+function emitCat(x: HasCat) {
+    return x.hatKatze;
+}
+
+let sebastian: User & HasCat = {
+    firstName: "Sebastian",
+    lastName: "Kurfürst",
+    event: "TYPO3 Barcamp",
+    hatKatze: true
+};
+
+document.body.innerHTML = greeter(sebastian) + emitCat(sebastian);
