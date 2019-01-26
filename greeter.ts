@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 interface User {
     firstName: string;
     lastName: string;
@@ -23,4 +25,4 @@ let sebastian: User & HasCat = {
     hatKatze: true
 };
 
-document.body.innerHTML = greeter(sebastian) + emitCat(sebastian);
+$(document.body).html(greeter(sebastian) + emitCat(sebastian));

@@ -1,3 +1,6 @@
+"use strict";
+exports.__esModule = true;
+var jquery_1 = require("jquery");
 function greeter(person) {
     return "Hello, " + person.firstName + " " + person.lastName;
 }
@@ -10,4 +13,4 @@ var sebastian = {
     event: "TYPO3 Barcamp",
     hatKatze: true
 };
-document.body.innerHTML = greeter(sebastian) + emitCat(sebastian);
+jquery_1["default"](document.body).html(greeter(sebastian) + emitCat(sebastian));
