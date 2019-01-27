@@ -1,17 +1,9 @@
-import $ from 'jquery';
-
-interface User {
-    firstName: string;
-    lastName: string;
-    event: string;
-}
+// müsste gehen, sorry ;)
+// import $ from 'jquery';
+import {User, greeter} from './greeter2';
 
 interface HasCat {
     hatKatze: boolean;
-}
-
-function greeter(person: User) {
-    return "Hello, " + person.firstName + " " +  person.lastName;
 }
 
 function emitCat(x: HasCat) {
@@ -19,10 +11,10 @@ function emitCat(x: HasCat) {
 }
 
 let sebastian: User & HasCat = {
-    firstName: "Sebastian",
+    //firstName: "Sebastian",
     lastName: "Kurfürst",
     event: "TYPO3 Barcamp",
     hatKatze: true
 };
 
-$(document.body).html(greeter(sebastian) + emitCat(sebastian));
+document.body.innerHTML = greeter(sebastian) + emitCat(sebastian);
