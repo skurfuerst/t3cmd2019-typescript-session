@@ -5,7 +5,7 @@
     "typescript": "^3.2.4"
   },
   "scripts": {
-    "build": "tsc greeter.ts",
-    "watch": "tsc -w greeter.ts"
+    "build": "tsc",
+    "watch": "tsc -w"
   }
 }

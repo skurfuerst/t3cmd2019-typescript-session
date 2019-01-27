@@ -1,5 +1,5 @@
 // müsste gehen, sorry ;)
-// import $ from 'jquery';
+import $ from 'jquery';
 import {User, greeter} from './greeter2';
 
 interface HasCat {
@@ -17,4 +17,4 @@ let sebastian: User & HasCat = {
     hatKatze: true
 };
 
-document.body.innerHTML = greeter(sebastian) + emitCat(sebastian);
+$(document.body).html(greeter(sebastian) + emitCat(sebastian));
